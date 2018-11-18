@@ -1,0 +1,85 @@
+{
+	//影片
+	"films": [
+		{
+			"id":"1",//编码
+			"date": "2016-05-02",//上映日志
+			"name": "西红柿首付",//影片名
+			"leader": "导演",//导演
+			"money": "90",//影片原价
+			"time": "90",//影片时长
+			"poster":"http://p1.meituan.net/movie/740bd990e4af29d537ce324ec2cd08d6300433.jpg@464w_644h_1e_1c",//大海报图片地址
+			//选出图片合集,
+			"pics":["http://p0.meituan.net/movie/72cdd68f18f0f6f11158f9f13655ef74351060.jpg@106w_106h_1e_1c","http://p0.meituan.net/movie/ce591bde5797f1cb6a7c9d5bbb1e657c316296.jpg@106w_106h_1e_1c","http://p1.meituan.net/movie/56c7330f32e0a06af18bdcb16c68d420285390.jpg@106w_106h_1e_1c"],
+			"describle":"这是一部最新的电影.....",//描述
+			"type":"爱情",//类型
+			"area":"中国",//区域
+			"yearage":"2018"//年代
+		},
+		{
+			"id":"2",//编码
+			"date": "2016-05-02",//上映日志
+			"name": "西红柿首付",//影片名
+			"leader": "导演",//导演
+			"money": "90",//影片原价
+			"time": "90",//影片时长
+			"poster":"http://p1.meituan.net/movie/740bd990e4af29d537ce324ec2cd08d6300433.jpg@464w_644h_1e_1c",//大海报图片地址
+			//选出图片合集,
+			"pics":["http://p0.meituan.net/movie/72cdd68f18f0f6f11158f9f13655ef74351060.jpg@106w_106h_1e_1c","http://p0.meituan.net/movie/ce591bde5797f1cb6a7c9d5bbb1e657c316296.jpg@106w_106h_1e_1c","http://p1.meituan.net/movie/56c7330f32e0a06af18bdcb16c68d420285390.jpg@106w_106h_1e_1c"],
+			"describle":"这是一部最新的电影.....",//描述
+			"type":"爱情",//类型
+			"area":"中国",//区域
+			"yearage":"2018"//年代
+		},
+		{
+			"id":"3",//编码
+			"date": "2016-05-02",//上映日志
+			"name": "西红柿首付",//影片名
+			"leader": "导演",//导演
+			"money": "90",//影片原价
+			"time": "90",//影片时长
+			"poster":"http://p1.meituan.net/movie/740bd990e4af29d537ce324ec2cd08d6300433.jpg@464w_644h_1e_1c",//大海报图片地址
+			//选出图片合集,
+			"pics":["http://p0.meituan.net/movie/72cdd68f18f0f6f11158f9f13655ef74351060.jpg@106w_106h_1e_1c","http://p0.meituan.net/movie/ce591bde5797f1cb6a7c9d5bbb1e657c316296.jpg@106w_106h_1e_1c","http://p1.meituan.net/movie/56c7330f32e0a06af18bdcb16c68d420285390.jpg@106w_106h_1e_1c"],
+			"describle":"这是一部最新的电影.....",//描述
+			"type":"爱情",//类型
+			"area":"中国",//区域
+			"yearage":"2018"//年代
+		}
+	],
+
+	//菜单
+	"menus": [
+		{
+			"id": 1,
+			"code": "01",
+			"name": "影片管理",
+			"menuIcon": "el-icon-location-outline",
+			"childrens": [
+				{
+					"id": 11,
+					"code": "0101",
+					"name": "影片列表",
+					"pageUrl": "/films"
+				}, {
+					"id": 12,
+					"code": "0102",
+					"name": "影片管理",
+					"pageUrl": "/films/mgr"
+				}
+			]
+		}, {
+			"id": 2,
+			"code": "02",
+			"name": "影院管理",
+			"menuIcon": "el-icon-star-off",
+			"childrens": [
+				{
+					"id": 21,
+					"code": "0201",
+					"name": "影院列表"
+				}
+			]
+		}
+	]
+}

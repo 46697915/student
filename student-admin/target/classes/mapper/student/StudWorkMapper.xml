@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.business.stud.mapper.StudWorkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.business.stud.entity.StudWork">
+        <id column="id" property="id" />
+        <result column="com_name" property="comName" />
+        <result column="com_address" property="comAddress" />
+        <result column="work_content" property="workContent" />
+        <result column="in_date" property="inDate" />
+        <result column="out_date" property="outDate" />
+        <result column="link_man" property="linkMan" />
+        <result column="com_city" property="comCity" />
+        <result column="work_xz" property="workXz" />
+        <result column="work_sshy" property="workSshy" />
+        <result column="remarks" property="remarks" />
+        <result column="operator" property="operator" />
+        <result column="operatedate" property="operatedate" />
+        <result column="stud_id" property="studId" />
+        <result column="stud_name" property="studName" />
+    </resultMap>
+
+    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+        select
+          id, com_name AS comName, com_address AS comAddress, work_content AS workContent,
+          in_date AS inDate, out_date AS outDate, link_man AS linkMan, com_city AS comCity,
+        work_xz AS workXz, work_sshy AS workSshy, remarks, operator, operatedate, stud_id AS studId, stud_name AS studName
+        from stud_work
+        <where>
+            <if test="inDateBegin != null" >
+                and in_date <![CDATA[>=]]> #{inDateBegin ,jdbcType=DATE}
+            </if>
+            <if test="inDateEnd != null">
+                and in_date <![CDATA[<=]]> #{inDateEnd ,jdbcType=DATE}
+            </if>
+            <if test="outDateBegin != null">
+                and out_date <![CDATA[>=]]> #{outDateBegin ,jdbcType=DATE}
+            </if>
+            <if test="outDateEnd != null">
+                and out_date <![CDATA[<=]]> #{outDateEnd ,jdbcType=DATE}
+            </if>
+            <if test="comName != null and comName != ''">
+                and com_name like concat('%',#{comName },'%')
+            </if>
+            <if test="studName != null and studName != ''">
+                and stud_name like concat('%',#{studName },'%')
+            </if>
+        </where>
+    </select>
+
+</mapper>
