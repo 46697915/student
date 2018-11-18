@@ -7,7 +7,12 @@
     <el-table :data="listData" border style="width: 100%;"
               :height=mapHeight
               stripe
-              size="mini" @selection-change="handleSelectionChange">
+              size="mini"
+              v-loading="listDataLoading"
+              element-loading-text="拼命加载中"
+              element-loading-spinner="el-icon-loading"
+              element-loading-background="rgba(0, 0, 0, 0.5)"
+              @selection-change="handleSelectionChange">
       <el-table-column type="index" width="50"> </el-table-column>
       <el-table-column fixed type="selection" width="55"></el-table-column>
       <el-table-column prop="id" label="主键"  width="50" v-if="false" ></el-table-column>
@@ -46,6 +51,7 @@
       return {
         listData: [],
         selectRows: [],
+        listDataLoading: false, //加载框
         queryUrl: this.domain.serverpath+"/studentInfo/listForPage",
         deleteUrl: this.domain.serverpath+"/studentInfo/deleteBatch",
 
@@ -54,13 +60,16 @@
       }
     },
     mounted() {
+      this.listDataLoading = true ;
       axios.get(this.queryUrl)
         .then(response => { //请求正确
           console.log(response);
           this.listData = response.data.result.list;
           this.pageTotal = response.data.result.total;
+          this.listDataLoading = false ;
         }).catch(error => { //请求失败
         console.log(error)
+        this.listDataLoading = false ;
       });
     },
     methods: {
@@ -88,13 +97,15 @@
         this.$set(param,"pageSize",this.$refs.page.$data.pageSize );
         param =  qs.stringify(param);
         console.log(param);
+        this.listDataLoading = true ;
         this.$axios.post(this.queryUrl,param)
           .then((response)=>{
             this.listData=response.data.result.list
             //引用组件的话在引用组件的父页面调用子组件的方法
             this.pageTotal = response.data.result.total;
+            this.listDataLoading = false ;
           }).catch((error)=>{
-
+            this.listDataLoading = false ;
         })
       },
       toEdit(){
