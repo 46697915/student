@@ -7,29 +7,28 @@
         <el-row>
           <el-col :span="8">
             <el-form-item label="名称">
-              <el-input v-model="queryFormData.name" placeholder="姓名"></el-input>
+              <el-input v-model="queryFormData.studName" placeholder="姓名"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="16">
-            <el-form-item label="入学日期">
-              <el-date-picker v-model="inschoolRange"
+            <el-form-item label="入职日期">
+              <el-date-picker v-model="inDateRange"
                               type="daterange"
                               range-separator="至"
                               start-placeholder="开始日期"
                               end-placeholder="结束日期"
                               format="yyyy-MM-dd"
                               value-format="yyyy-MM-dd"
-                              :default-time="['00:00:00', '23:59:59']"
                               style="width: 80%;"
               >
               </el-date-picker>
               <!--<el-date-picker type="date" v-model="queryFormData.inschoolbegin" style="width: 30%;"-->
-                              <!--format="yyyy-MM-dd"-->
-                              <!--value-format="yyyy-MM-dd"></el-date-picker>-->
+              <!--format="yyyy-MM-dd"-->
+              <!--value-format="yyyy-MM-dd"></el-date-picker>-->
               <!--至-->
               <!--<el-date-picker type="date" v-model="queryFormData.inschoolend" style="width: 30%;"-->
-                              <!--format="yyyy-MM-dd"-->
-                              <!--value-format="yyyy-MM-dd"></el-date-picker>-->
+              <!--format="yyyy-MM-dd"-->
+              <!--value-format="yyyy-MM-dd"></el-date-picker>-->
             </el-form-item>
           </el-col>
         </el-row>
@@ -55,30 +54,22 @@
     <el-button type="success" size="small" icon="el-icon-plus" @click="addDialog">添加</el-button>
     <el-button type="info" size="small" icon="el-icon-edit" @click="editDialog">修改</el-button>
     <el-button type="danger" size="small" icon="el-icon-delete" @click="deleteHandle">删除</el-button>
-    <el-button type="success" size="small" icon="el-icon-search" @click="workListHandle">工作经历</el-button>
 
     <!--添加弹出框-->
-    <add  ref="addDialog"
-          :addDialogIsShow="addDialogIsShow"
+    <add ref="addDialog"
+         :addDialogIsShow="addDialogIsShow"
          v-on:dialogClose="addDialogCloseHandle"></add>
     <!--添加弹出框-->
-    <edit  ref="editDialog"
+    <edit ref="editDialog"
           :editDialogIsShow="editDialogIsShow"
           v-on:dialogClose="editDialogCloseHandle"></edit>
-
-    <el-dialog title="添加"
-               :visible.sync="workListDialogIsShow" width="60%">
-      <workList ref="workListDialog"></workList>
-    </el-dialog>
   </el-row>
-
 </template>
 
 <script>
   import axios from 'axios'
   import add from './add.vue'
   import edit from './edit.vue'
-  import workList from './../work/list.vue'
 
   export default {
     //父组件传过来的值
@@ -88,12 +79,11 @@
         queryDialogIsShow: false,  //查询对话框是否显示
         addDialogIsShow: false, //添加窗口
         editDialogIsShow: false, //修改窗口
-        workListDialogIsShow: false, //学生工作窗口
-        inschoolRange: '',  //入学日期范围
+        inDateRange: '',  //入职日期范围
         queryFormData: {
-          name: '',
-          inschoolbegin: '',
-          inschoolend: '',
+          studName: '',
+          inDateBegin: '',
+          inDateEnd: '',
           sex: ''
         }
       }
@@ -108,16 +98,16 @@
         let form1 = this.$data.queryFormData;
         //获取查询参数，将参数解析成键值对
         let qs = require("qs");
-        let param =  qs.stringify(form1);
-        this.$emit("toolbarEvent","query",param);
-        this.queryDialogIsShow = false ;
+        let param = qs.stringify(form1);
+        this.$emit("toolbarEvent", "query", param);
+        this.queryDialogIsShow = false;
       },
       resetQueryForm() { //重置
         let datas = this.$data.queryFormData;
         for(var a in datas){
           datas[a] = '';
         }
-        this.inschoolRange='';  //入学日期范围
+        this.$data.inDateRange = '';
       },
       //修改按钮，弹出修改框
       editDialog(){
@@ -131,41 +121,37 @@
             formData[a] = datas[0][a];
           }
           this.editDialogIsShow = true;
-          console.log('editDialog!'+this.editDialogIsShow);
+          console.log('editDialog!' + this.editDialogIsShow);
         }
-      },
+      }
+      ,
       //删除按钮
       deleteHandle()
       {
         //获取要被删除的行，然后到后台删除
-        this.$emit("toolbarEvent","delete","");
-      },
-      //工作经历按钮
-      workListHandle()
-      {
-        this.workListDialogIsShow = true ;
+        this.$emit("toolbarEvent", "delete", "");
       }
       ,
       //当弹出框关闭时调用
       addDialogCloseHandle(isShow)
       {
-        this.$emit("toolbarEvent","query","");
+        this.$emit("toolbarEvent", "query", "");
         this.addDialogIsShow = isShow;
       },
       editDialogCloseHandle(isShow)
       {
-        this.$emit("toolbarEvent","query","");
+        this.$emit("toolbarEvent", "query", "");
         this.editDialogIsShow = isShow;
       }
     },
     watch: {
-      inschoolRange: function () {  //监控日期访问
-        this.queryFormData.inschoolbegin=this.inschoolRange[0] ;
-        this.queryFormData.inschoolend=this.inschoolRange[1] ;
+      inDateRange: function () {  //监控日期访问
+        this.queryFormData.inDateBegin=this.inDateRange[0] ;
+        this.queryFormData.inDateEnd=this.inDateRange[1] ;
       }
     },
     components: {
-      add,edit,workList
+      add, edit
     }
   }
 </script>

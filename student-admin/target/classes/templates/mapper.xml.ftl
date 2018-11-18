@@ -45,7 +45,7 @@
         <where>
 <#list table.fields as field>
     <#if field.propertyType == 'Date'>
-        <if test="${field.propertyName} != null and ${field.propertyName} != ''">
+        <if test="${field.propertyName} != null">
             and ${field.name} =  ${r'#{'}${field.propertyName},jdbcType=DATE${r'}'}
         </if>
     <#else>

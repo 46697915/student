@@ -1,5 +1,6 @@
 <template>
-  <el-select v-model="value8" filterable
+  <el-select v-model="selectedValue"
+             filterable
              default-first-option="true"
              @change="changeHandle"
              placeholder="请选择">
@@ -8,6 +9,8 @@
       :key="item.id"
       :label="item.name"
       :value="item.id">
+      <span style="float: left">{{item.name }}</span>
+      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.id }}</span>
     </el-option>
   </el-select>
 </template>
@@ -19,7 +22,7 @@
     data() {
       return {
         options: [],
-        value8: '',
+        selectedValue: '',
 
         queryUrl: this.domain.serverpath+"/studentInfo/list"
       }
@@ -44,11 +47,24 @@
         }
         //弹出框关闭是，触发dialogClose事件，父组件处理此事件
         this.$emit("selectStudChange", option);
-      }
+      },
+//      filterHandle(value){
+//        let datas = this.$data.options;
+//        for(var a in datas){
+//          alert(datas[a].id);
+//          if(datas[a].id.toLowerCase().indexOf(value.toLowerCase())
+//              || datas[a].name.toLowerCase().indexOf(value.toLowerCase())
+//          ){
+//            alert(datas[a].name);
+//            return true ;
+//          }
+//        }
+//        return false ;
+//      }
     },
     watch: {
       selectStudValue: function () {  //监控父组件传过来的属性变化
-        this.value8 = this.selectStudValue;
+        this.selectedValue = this.selectStudValue;
       }
     }
   }
