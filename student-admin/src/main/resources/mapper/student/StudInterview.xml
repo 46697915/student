@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.business.stud.mapper.StudInterviewMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.business.stud.entity.StudInterview">
+        <id column="id" property="id" />
+        <result column="stud_id" property="studId" />
+        <result column="stud_name" property="studName" />
+        <result column="com_name" property="comName" />
+        <result column="com_xz" property="comXz" />
+        <result column="com_adress" property="comAdress" />
+        <result column="interview_gw" property="interviewGw" />
+        <result column="com_gm" property="comGm" />
+        <result column="zp_gm" property="zpGm" />
+        <result column="interview_date" property="interviewDate" />
+        <result column="interview_lc" property="interviewLc" />
+        <result column="interview_comment" property="interviewComment" />
+        <result column="link_mail" property="linkMail" />
+        <result column="link_phone" property="linkPhone" />
+        <result column="is_channel" property="isChannel" />
+        <result column="channel_manager" property="channelManager" />
+        <result column="resume" property="resume" />
+        <result column="passing_difficulty" property="passingDifficulty" />
+        <result column="is_recommend" property="isRecommend" />
+        <result column="is_written" property="isWritten" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+        select
+            id, stud_id AS studId, stud_name AS studName, com_name AS comName, com_xz AS comXz, com_adress AS comAdress, interview_gw AS interviewGw, com_gm AS comGm, zp_gm AS zpGm, interview_date AS interviewDate, interview_lc AS interviewLc, interview_comment AS interviewComment, link_mail AS linkMail, link_phone AS linkPhone, is_channel AS isChannel, channel_manager AS channelManager, resume, passing_difficulty AS passingDifficulty, is_recommend AS isRecommend, is_written AS isWritten, remark
+        from stud_interview
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="studId != null and studId != ''">
+            and stud_id =  #{studId,jdbcType=VARCHAR}
+        </if>
+        <if test="studName != null and studName != ''">
+            and stud_name =  #{studName,jdbcType=VARCHAR}
+        </if>
+        <if test="comName != null and comName != ''">
+            and com_name =  #{comName,jdbcType=VARCHAR}
+        </if>
+        <if test="comXz != null and comXz != ''">
+            and com_xz =  #{comXz,jdbcType=VARCHAR}
+        </if>
+        <if test="comAdress != null and comAdress != ''">
+            and com_adress =  #{comAdress,jdbcType=VARCHAR}
+        </if>
+        <if test="interviewGw != null and interviewGw != ''">
+            and interview_gw =  #{interviewGw,jdbcType=VARCHAR}
+        </if>
+        <if test="comGm != null and comGm != ''">
+            and com_gm =  #{comGm,jdbcType=VARCHAR}
+        </if>
+        <if test="zpGm != null and zpGm != ''">
+            and zp_gm =  #{zpGm,jdbcType=VARCHAR}
+        </if>
+        <if test="interviewDate != null and interviewDate != ''">
+            and interview_date =  #{interviewDate,jdbcType=VARCHAR}
+        </if>
+        <if test="interviewLc != null and interviewLc != ''">
+            and interview_lc =  #{interviewLc,jdbcType=VARCHAR}
+        </if>
+        <if test="interviewComment != null and interviewComment != ''">
+            and interview_comment =  #{interviewComment,jdbcType=VARCHAR}
+        </if>
+        <if test="linkMail != null and linkMail != ''">
+            and link_mail =  #{linkMail,jdbcType=VARCHAR}
+        </if>
+        <if test="linkPhone != null and linkPhone != ''">
+            and link_phone =  #{linkPhone,jdbcType=VARCHAR}
+        </if>
+        <if test="isChannel != null and isChannel != ''">
+            and is_channel =  #{isChannel,jdbcType=VARCHAR}
+        </if>
+        <if test="channelManager != null and channelManager != ''">
+            and channel_manager =  #{channelManager,jdbcType=VARCHAR}
+        </if>
+        <if test="resume != null and resume != ''">
+            and resume =  #{resume,jdbcType=VARCHAR}
+        </if>
+        <if test="passingDifficulty != null and passingDifficulty != ''">
+            and passing_difficulty =  #{passingDifficulty,jdbcType=VARCHAR}
+        </if>
+        <if test="isRecommend != null and isRecommend != ''">
+            and is_recommend =  #{isRecommend,jdbcType=VARCHAR}
+        </if>
+        <if test="isWritten != null and isWritten != ''">
+            and is_written =  #{isWritten,jdbcType=VARCHAR}
+        </if>
+        <if test="remark != null and remark != ''">
+            and remark =  #{remark,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+</mapper>

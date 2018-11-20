@@ -71,7 +71,9 @@ public class MpGenerator {
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
 //        strategy.setInclude(new String[] { "sys_menu" }); // 需要生成的表
 //        strategy.setInclude(new String[] { "student_info" }); // 需要生成的表
-        strategy.setInclude(new String[]{"stud_work"}); // 需要生成的表
+//        strategy.setInclude(new String[]{"stud_work"}); // 需要生成的表
+//        strategy.setInclude(new String[]{"stud_learn"}); // 需要生成的表
+        strategy.setInclude(new String[]{"stud_review","stud_interview"}); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         // 自定义实体父类
         // strategy.setSuperEntityClass("com.baomidou.demo.TestEntity");
@@ -121,6 +123,19 @@ public class MpGenerator {
                 String path = gc.getOutputDir();
 
                 return path + "/copy/" + tableInfo.getEntityName() + ".vue";
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+        //自定义 Vo java 类
+        focList.add(new FileOutConfig("/templates/entityVo.java.ftl") {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输入文件名称
+                String path = gc.getOutputDir();
+                String pacg = pc.getParent();
+//                return "/develop/code/xml/" + tableInfo.getEntityName() +".xml";
+                return path+"/"+ pacg.replace(".","/")+"/entity/" + tableInfo.getEntityName() + "Vo.java";
             }
         });
         cfg.setFileOutConfigList(focList);

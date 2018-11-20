@@ -55,7 +55,7 @@
     <el-button type="success" size="small" icon="el-icon-plus" @click="addDialog">添加</el-button>
     <el-button type="info" size="small" icon="el-icon-edit" @click="editDialog">修改</el-button>
     <el-button type="danger" size="small" icon="el-icon-delete" @click="deleteHandle">删除</el-button>
-    <el-button type="success" size="small" icon="el-icon-search" @click="workListHandle">工作经历</el-button>
+    <!--<el-button type="success" size="small" icon="el-icon-search" @click="workListHandle">工作经历</el-button>-->
 
     <!--添加弹出框-->
     <add  ref="addDialog"

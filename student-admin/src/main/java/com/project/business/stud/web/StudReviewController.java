@@ -1,10 +1,10 @@
-package ${package.Controller};
+package com.project.business.stud.web;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
-import ${package.Service}.${table.serviceName};
-import ${package.Entity}.${entity}Vo;
+import com.project.business.stud.service.IStudReviewService;
+import com.project.business.stud.entity.StudReviewVo;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -16,39 +16,22 @@ import com.github.pagehelper.PageInfo;
 import com.project.comment.PageElementUI;
 import com.project.comment.ResponseResult;
 
-<#if restControllerStyle>
-import org.springframework.web.bind.annotation.RestController;
-<#else>
 import org.springframework.stereotype.Controller;
-</#if>
-<#if superControllerClassPackage??>
-import ${superControllerClassPackage};
-</#if>
 
 /**
  * <p>
- * ${table.comment} 前端控制器
+ *  前端控制器
  * </p>
  *
- * @author ${author}
- * @since ${date}
+ * @author Mht
+ * @since 2018-11-20
  */
-<#if restControllerStyle>
-@RestController
-<#else>
 @Controller
-</#if>
-@RequestMapping("<#if package.ModuleName??>/${package.ModuleName}</#if>/<#if controllerMappingHyphenStyle??>${controllerMappingHyphen}<#else>${table.entityPath}</#if>")
-<#if kotlin>
-class ${table.controllerName}<#if superControllerClass??> : ${superControllerClass}()</#if>
-<#else>
-<#if superControllerClass??>
-public class ${table.controllerName} extends ${superControllerClass} {
-<#else>
-public class ${table.controllerName} {
+@RequestMapping("/studReview")
+public class StudReviewController {
 
     @Autowired
-    private ${table.serviceName} service;
+    private IStudReviewService service;
 
     /**
     * 查询列表数据
@@ -56,7 +39,7 @@ public class ${table.controllerName} {
     * @return
     */
     @RequestMapping("/list")
-    public ResponseResult list(${entity}Vo vo){
+    public ResponseResult list(StudReviewVo vo){
         List r = service.selectBy(vo);
         ResponseResult rr = ResponseResult.getResponseResult();
         rr.setResult(r);
@@ -68,12 +51,12 @@ public class ${table.controllerName} {
     * @return
     */
     @RequestMapping("/listForPage")
-    public ResponseResult listForPage(PageElementUI pe, ${entity}Vo vo){
+    public ResponseResult listForPage(PageElementUI pe, StudReviewVo vo){
         PageHelper.startPage(pe.getPageNO(),pe.getPageSize());
         List r = service.selectBy(vo);
 
         //获取分页信息
-        PageInfo<${entity}Vo> pi = new PageInfo<${entity}Vo>(r);
+        PageInfo<StudReviewVo> pi = new PageInfo<StudReviewVo>(r);
 
         Map<String, Object> rMap = new HashMap<String,Object>();
         rMap.put("total",pi.getTotal());
@@ -85,14 +68,14 @@ public class ${table.controllerName} {
     }
 
     @RequestMapping("/add")
-    public ResponseResult add(${entity}Vo vo){
+    public ResponseResult add(StudReviewVo vo){
         boolean r = service.insert(vo);
         ResponseResult rr = ResponseResult.getResponseResult();
         rr.setResult(r);
         return rr ;
     }
     @RequestMapping("/edit")
-    public ResponseResult edit(${entity}Vo vo){
+    public ResponseResult edit(StudReviewVo vo){
         boolean r = service.updateById(vo);
         ResponseResult rr = ResponseResult.getResponseResult();
         rr.setResult(r);
@@ -118,5 +101,3 @@ public class ${table.controllerName} {
     }
 
 }
-</#if>
-</#if>

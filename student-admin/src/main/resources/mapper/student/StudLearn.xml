@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.business.stud.mapper.StudLearnMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.business.stud.entity.StudLearn">
+        <id column="id" property="id" />
+        <result column="stud_id" property="studId" />
+        <result column="stud_code" property="studCode" />
+        <result column="stud_name" property="studName" />
+        <result column="course_id" property="courseId" />
+        <result column="course_name" property="courseName" />
+        <result column="teacher_id" property="teacherId" />
+        <result column="teacher_name" property="teacherName" />
+        <result column="teacher2_id" property="teacher2Id" />
+        <result column="teacher2_name" property="teacher2Name" />
+        <result column="teacher3_id" property="teacher3Id" />
+        <result column="teacher3_name" property="teacher3Name" />
+        <result column="course_begin" property="courseBegin" />
+        <result column="course_end" property="courseEnd" />
+        <result column="ll_course" property="llCourse" />
+        <result column="jn_course" property="jnCourse" />
+        <result column="mb_conut" property="mbConut" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+        select
+            id, stud_id AS studId, stud_code AS studCode, stud_name AS studName, course_id AS courseId, course_name AS courseName, teacher_id AS teacherId, teacher_name AS teacherName, teacher2_id AS teacher2Id, teacher2_name AS teacher2Name, teacher3_id AS teacher3Id, teacher3_name AS teacher3Name, course_begin AS courseBegin, course_end AS courseEnd, ll_course AS llCourse, jn_course AS jnCourse, mb_conut AS mbConut, remark
+        from stud_learn
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="studId != null and studId != ''">
+            and stud_id =  #{studId,jdbcType=VARCHAR}
+        </if>
+        <if test="studCode != null and studCode != ''">
+            and stud_code =  #{studCode,jdbcType=VARCHAR}
+        </if>
+        <if test="studName != null and studName != ''">
+            and stud_name =  #{studName,jdbcType=VARCHAR}
+        </if>
+        <if test="courseId != null and courseId != ''">
+            and course_id =  #{courseId,jdbcType=VARCHAR}
+        </if>
+        <if test="courseName != null and courseName != ''">
+            and course_name =  #{courseName,jdbcType=VARCHAR}
+        </if>
+        <if test="teacherId != null and teacherId != ''">
+            and teacher_id =  #{teacherId,jdbcType=VARCHAR}
+        </if>
+        <if test="teacherName != null and teacherName != ''">
+            and teacher_name =  #{teacherName,jdbcType=VARCHAR}
+        </if>
+        <if test="teacher2Id != null and teacher2Id != ''">
+            and teacher2_id =  #{teacher2Id,jdbcType=VARCHAR}
+        </if>
+        <if test="teacher2Name != null and teacher2Name != ''">
+            and teacher2_name =  #{teacher2Name,jdbcType=VARCHAR}
+        </if>
+        <if test="teacher3Id != null and teacher3Id != ''">
+            and teacher3_id =  #{teacher3Id,jdbcType=VARCHAR}
+        </if>
+        <if test="teacher3Name != null and teacher3Name != ''">
+            and teacher3_name =  #{teacher3Name,jdbcType=VARCHAR}
+        </if>
+        <if test="courseBegin != null and courseBegin != ''">
+            and course_begin =  #{courseBegin,jdbcType=VARCHAR}
+        </if>
+        <if test="courseEnd != null and courseEnd != ''">
+            and course_end =  #{courseEnd,jdbcType=VARCHAR}
+        </if>
+        <if test="llCourse != null and llCourse != ''">
+            and ll_course =  #{llCourse,jdbcType=VARCHAR}
+        </if>
+        <if test="jnCourse != null and jnCourse != ''">
+            and jn_course =  #{jnCourse,jdbcType=VARCHAR}
+        </if>
+        <if test="mbConut != null and mbConut != ''">
+            and mb_conut =  #{mbConut,jdbcType=VARCHAR}
+        </if>
+        <if test="remark != null and remark != ''">
+            and remark =  #{remark,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+</mapper>
