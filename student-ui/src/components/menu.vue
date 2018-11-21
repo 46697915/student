@@ -9,8 +9,9 @@
                 :index="getIndex(m1.code)">
       <template slot="title">
         <i v-if="m1.code==1" class="el-icon-setting"></i>
-        <i v-if="m1.code==4" class="el-icon-goods"></i>
-        <i v-if="m1.code==12" class="el-icon-sold-out"></i>
+        <i v-else-if="m1.code==4" class="el-icon-goods"></i>
+        <i v-else-if="m1.code==12" class="el-icon-sold-out"></i>
+        <i v-else class="el-icon-search"></i>
         <span slot="title">{{m1.name}}</span>
       </template>
 

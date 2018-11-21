@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import StudentInfotest from '@/components/student/StudentInfo'
 import MenuInfo from '@/components/menu/list'
 import StudentInfo from '@/components/student/info/list'
 import StudentWork from '@/components/student/work/list'
@@ -47,11 +46,6 @@ export default new Router({
       path: '/studentInterview',
       name: 'StudentInterview',
       component: StudentInterview
-    },
-    {
-      path: '/studentInfotest',
-      name: 'StudentInfotest',
-      component: StudentInfotest
     }
   ]
 })

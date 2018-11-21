@@ -2,46 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="925207f8-1248-4168-8bf0-2e83a768c24a" name="Default" comment="初始化">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/interview/add.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/interview/edit.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/interview/list.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/interview/pagefoot.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/interview/toolbar.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/review/add.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/review/edit.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/review/list.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/review/pagefoot.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/components/student/review/toolbar.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student-ui/src/utils/rules.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/src/main/resources/mapper/student/StudInterview.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/src/main/resources/mapper/student/StudLearn.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/src/main/resources/mapper/student/StudReview.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/entity/StudInterview.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/entity/StudInterviewVo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/entity/StudLearn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/web/StudReviewController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/MpGenerator.class" afterPath="$PROJECT_DIR$/student-admin/target/classes/com/project/MpGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/entity/StudReview.class" afterPath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/entity/StudReview.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/web/StudInterviewController.class" afterPath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/web/StudInterviewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/web/StudLearnController.class" afterPath="$PROJECT_DIR$/student-admin/target/classes/com/project/business/stud/web/StudLearnController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student-ui/src/components/student/StudentInfo.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student-ui/src/components/student/add.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student-ui/src/components/student/edit.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student-ui/src/components/student/list.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student-ui/src/components/student/toolbar.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/com/project/MpGenerator.java" afterPath="$PROJECT_DIR$/student-admin/src/main/java/com/project/MpGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/entity/StudReview.java" afterPath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/entity/StudReview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudInterviewController.java" afterPath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudInterviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudLearnController.java" afterPath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudLearnController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudReviewController.java" afterPath="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/web/StudReviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/java/copy/StudReview.vue" afterPath="$PROJECT_DIR$/student-admin/src/main/java/copy/StudReview.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/src/main/resources/templates/mapper.xml.ftl" afterPath="$PROJECT_DIR$/student-admin/src/main/resources/templates/mapper.xml.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudInterview.xml" afterPath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudInterview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudLearn.xml" afterPath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudLearn.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudReview.xml" afterPath="$PROJECT_DIR$/student-admin/target/classes/mapper/student/StudReview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-admin/target/classes/templates/mapper.xml.ftl" afterPath="$PROJECT_DIR$/student-admin/target/classes/templates/mapper.xml.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/index.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/student/info/add.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/student/info/add.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/student/info/selectStud.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/student/info/selectStud.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/student/learn/add.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/student/learn/add.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/student/learn/edit.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/student/learn/edit.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/student/learn/list.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/student/learn/list.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/components/menu.vue" afterPath="$PROJECT_DIR$/student-ui/src/components/menu.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-ui/src/router/index.js" afterPath="$PROJECT_DIR$/student-ui/src/router/index.js" />
     </list>
     <ignored path="student.iws" />
@@ -113,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student-ui/src/components/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="42">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -125,6 +92,28 @@
                 <element signature="n#style#0;n#el-main#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-footer#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student-ui/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student-ui/src/components/menu.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="69" column="50" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/mapper/StudWorkMapper.java" />
         <option value="$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/service/impl/StudWorkServiceImpl.java" />
         <option value="$PROJECT_DIR$/student-ui/src/components/menu/add.vue" />
         <option value="$PROJECT_DIR$/student-admin/src/main/resources/application.yml" />
@@ -217,11 +205,12 @@
         <option value="$PROJECT_DIR$/student-ui/src/components/student/review/add.vue" />
         <option value="$PROJECT_DIR$/student-ui/src/components/student/review/list.vue" />
         <option value="$PROJECT_DIR$/student-ui/src/components/student/review/edit.vue" />
-        <option value="$PROJECT_DIR$/student-ui/src/router/index.js" />
         <option value="$PROJECT_DIR$/student-ui/src/components/student/interview/add.vue" />
         <option value="$PROJECT_DIR$/student-ui/src/components/student/interview/edit.vue" />
         <option value="$PROJECT_DIR$/student-ui/src/components/student/interview/list.vue" />
         <option value="$PROJECT_DIR$/student-ui/src/components/index.vue" />
+        <option value="$PROJECT_DIR$/student-ui/src/components/menu.vue" />
+        <option value="$PROJECT_DIR$/student-ui/src/router/index.js" />
       </list>
     </option>
   </component>
@@ -512,148 +501,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="student-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="review" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="class" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="class" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="course" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="student-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -904,11 +751,11 @@
       <recent name="com.project.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\student\student-ui\src\components\student\test" />
       <recent name="E:\IdeaProjects\student\student-ui\src\components\class" />
       <recent name="E:\IdeaProjects\student\student-admin\src\main\resources\mapper\student" />
       <recent name="E:\IdeaProjects\student\student-admin\src\main\resources\mapper" />
       <recent name="E:\IdeaProjects\student\student-ui\src\components\menu" />
-      <recent name="E:\IdeaProjects\student\student-ui\src\components\student" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
@@ -1505,7 +1352,7 @@
       <workItem from="1542546247765" duration="3519000" />
       <workItem from="1542599382530" duration="2650000" />
       <workItem from="1542694753094" duration="10389000" />
-      <workItem from="1542760424959" duration="15164000" />
+      <workItem from="1542760424959" duration="17910000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1542530681818</created>
@@ -1525,7 +1372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174192000" />
+    <option name="totallyTimeSpent" value="176938000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1538,7 +1385,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1370" height="735" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1553,7 +1400,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49694657" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24351145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24351145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1634,14 +1481,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/student-admin/src/main/java/com/project/business/stud/mapper/StudInterviewMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student-admin/src/main/resources/mapper/student/StudInterview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1824,23 +1663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student-ui/src/components/menu.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1597">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-ui/src/components/student/StudentInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-ui/src/components/student/list.vue">
+    <entry file="file://$PROJECT_DIR$/student-ui/src/components/student/test/list.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
@@ -1970,12 +1793,9 @@
           <caret line="196" column="7" selection-start-line="196" selection-start-column="7" selection-end-line="196" selection-end-column="7" />
           <folding>
             <element signature="n#el-row#0;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#el-row#1;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#el-row#2;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#el-row#3;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-row#4;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-row#5;n#el-form#0;n#el-dialog#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#4541#4566#0" expanded="true" />
+            <element signature="e#4541#4566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1993,16 +1813,6 @@
         <state relative-caret-position="150">
           <caret line="36" column="29" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-ui/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2078,16 +1888,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/student-ui/src/components/student/test/toolbar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student-ui/src/components/student/test/StudentInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/student-ui/src/components/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="42">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-aside#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-main#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-footer#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student-ui/src/components/menu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="69" column="50" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student-ui/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
