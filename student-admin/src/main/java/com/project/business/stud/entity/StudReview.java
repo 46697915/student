@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 
 /**
@@ -64,6 +67,7 @@ public class StudReview extends Model<StudReview> {
     private String reviewContent;
 
     @TableField("review_date")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date reviewDate;
 
     @TableField("tj_fx")
@@ -175,6 +179,7 @@ public class StudReview extends Model<StudReview> {
     public void setReviewContent(String reviewContent) {
         this.reviewContent = reviewContent;
     }
+    @JsonFormat(pattern="yyyy-MM-dd")
     public Date getReviewDate() {
         return reviewDate;
     }

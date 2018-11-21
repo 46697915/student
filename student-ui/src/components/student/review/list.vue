@@ -16,23 +16,24 @@
       <el-table-column type="index" label="序号" width="50"> </el-table-column>
       <el-table-column fixed type="selection" width="55"></el-table-column>
       <el-table-column prop="id" label="ID" width="80" v-if="false"></el-table-column>
-      <el-table-column prop="studCode" label="学生编码" width="80" ></el-table-column>
+      <el-table-column prop="teacherName" label="点评老师" width="80" ></el-table-column>
+      <el-table-column prop="teacherType" label="老师类型" width="80" ></el-table-column>
       <el-table-column prop="studName" label="学生名称" width="80" ></el-table-column>
       <el-table-column prop="courseName" label="课程名称" width="80" ></el-table-column>
-      <el-table-column prop="teacherName" label="讲师名称" width="80" ></el-table-column>
-      <el-table-column prop="teacher2Name" label="辅导员名称" width="80" ></el-table-column>
-      <el-table-column prop="teacher3Name" label="就业指导名称" width="80" ></el-table-column>
       <el-table-column prop="courseBegin" label="课程开始时间" width="80" ></el-table-column>
       <el-table-column prop="courseEnd" label="课程结束时间" width="80" ></el-table-column>
-      <el-table-column prop="llCourse" label="理论成绩" width="80" ></el-table-column>
-      <el-table-column prop="jnCourse" label="技能成绩" width="80" ></el-table-column>
-      <el-table-column prop="mbConut" label="末班次数" width="80" ></el-table-column>
+      <el-table-column prop="skillLevel" label="技能等级" width="80" ></el-table-column>
+      <el-table-column prop="gtLevel" label="沟通等级" width="80" ></el-table-column>
+      <el-table-column prop="reviewScore" label="点评分数" width="80" ></el-table-column>
+      <el-table-column prop="reviewContent" label="点评内容" width="80" ></el-table-column>
+      <el-table-column prop="reviewDate" label="点评日期" width="80" ></el-table-column>
+      <el-table-column prop="tjFx" label="推荐方向" width="80" ></el-table-column>
+      <el-table-column prop="tjCom" label="推荐公司类型" width="80" ></el-table-column>
+      <el-table-column prop="tjGw" label="推荐岗位" width="80" ></el-table-column>
       <el-table-column prop="remark" label="备注" width="80" ></el-table-column>
-      <el-table-column prop="studId" label="学生id" width="80" ></el-table-column>
+      <el-table-column prop="teacherId" label="点评老师ID" width="80" ></el-table-column>
+      <el-table-column prop="studId" label="学生ID" width="80" ></el-table-column>
       <el-table-column prop="courseId" label="课程id" width="80" ></el-table-column>
-      <el-table-column prop="teacherId" label="讲师id" width="80" ></el-table-column>
-      <el-table-column prop="teacher2Id" label="辅导员id" width="80" ></el-table-column>
-      <el-table-column prop="teacher3Id" label="就业指导id" width="80" ></el-table-column>
 
       <el-table-column label="操作" width="150">
         <template slot-scope="scope">
@@ -58,8 +59,8 @@
         listData: [],
         selectRows: [],
         listDataLoading: false, //加载框
-        queryUrl: this.domain.serverpath+"/studLearn/listForPage",
-        deleteUrl: this.domain.serverpath+"/studLearn/deleteBatch",
+        queryUrl: this.domain.serverpath+"/studReview/listForPage",
+        deleteUrl: this.domain.serverpath+"/studReview/deleteBatch",
 
         //分页组件使用，总页数
         pageTotal: 0

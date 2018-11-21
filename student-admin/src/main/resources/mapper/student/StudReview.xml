@@ -27,7 +27,7 @@
 
 
 
-    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+    <select id="selectBy" parameterType="StudReviewVo" resultType="StudReview">
         select
             id, teacher_name AS teacherName, teacher_id AS teacherId, teacher_type AS teacherType, stud_id AS studId, stud_name AS studName, course_id AS courseId, course_name AS courseName, course_begin AS courseBegin, course_end AS courseEnd, skill_level AS skillLevel, gt_level AS gtLevel, review_score AS reviewScore, review_content AS reviewContent, review_date AS reviewDate, tj_fx AS tjFx, tj_com AS tjCom, tj_gw AS tjGw, remark
         from stud_review

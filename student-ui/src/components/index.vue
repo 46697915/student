@@ -1,5 +1,5 @@
 <template>
-    <el-container style=" border: 1px solid #eee">
+    <el-container style=" border: 0px solid #eee">
         <el-header style="height: 50px; text-align: left; font-size: 12px">
             <span>学生管理系统</span>
         </el-header>
@@ -12,7 +12,7 @@
             </el-main>
         </el-container>
         <el-footer style="height: 20px;background: red;">
-            <div>{{mapHeight}}</div>
+            <div></div>
         </el-footer>
     </el-container>
 </template>

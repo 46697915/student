@@ -29,7 +29,7 @@
 
 
 
-    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+    <select id="selectBy" parameterType="StudInterviewVo" resultType="StudInterview">
         select
             id, stud_id AS studId, stud_name AS studName, com_name AS comName, com_xz AS comXz, com_adress AS comAdress, interview_gw AS interviewGw, com_gm AS comGm, zp_gm AS zpGm, interview_date AS interviewDate, interview_lc AS interviewLc, interview_comment AS interviewComment, link_mail AS linkMail, link_phone AS linkPhone, is_channel AS isChannel, channel_manager AS channelManager, resume, passing_difficulty AS passingDifficulty, is_recommend AS isRecommend, is_written AS isWritten, remark
         from stud_interview

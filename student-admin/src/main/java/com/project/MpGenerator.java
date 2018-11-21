@@ -30,7 +30,7 @@ public class MpGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setAuthor("Mht");
+        gc.setAuthor("cl");
         gc.setOutputDir("E://IdeaProjects/student/student-admin/src/main/java");
         gc.setFileOverride(false);// 是否覆盖同名文件，默认是false
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
@@ -73,7 +73,7 @@ public class MpGenerator {
 //        strategy.setInclude(new String[] { "student_info" }); // 需要生成的表
 //        strategy.setInclude(new String[]{"stud_work"}); // 需要生成的表
 //        strategy.setInclude(new String[]{"stud_learn"}); // 需要生成的表
-        strategy.setInclude(new String[]{"stud_review","stud_interview"}); // 需要生成的表
+        strategy.setInclude(new String[]{"stud_learn","stud_review","stud_interview"}); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         // 自定义实体父类
         // strategy.setSuperEntityClass("com.baomidou.demo.TestEntity");

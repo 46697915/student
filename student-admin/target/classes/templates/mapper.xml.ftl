@@ -38,7 +38,7 @@
 </#if>
 
 
-    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+    <select id="selectBy" parameterType="${entity}Vo" resultType="${entity}">
         select
             ${table.fieldNames}
         from ${table.name}

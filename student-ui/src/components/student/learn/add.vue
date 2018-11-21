@@ -2,7 +2,7 @@
 
   <!--窗口-->
   <el-dialog title="添加" :visible.sync="dialogIsShow" width="60%" @close="dialogClose">
-    <el-form :model="formData" ref="formData" label-width="100px" size="medium">
+    <el-form :model="formData" ref="formData" :rules="rules2" label-width="100px" size="medium">
 
       <el-row>
         <el-col :span="8">
@@ -14,32 +14,39 @@
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="公司名称" prop="comName">
-            <el-input v-model="formData.comName"></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :span="8">
-          <el-form-item label="公司地址" prop="comAddress">
-            <el-input v-model="formData.comAddress"></el-input>
+          <el-form-item label="课程名称" prop="courseName">
+            <el-input v-model="formData.courseName"></el-input>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="8">
-          <el-form-item label="工作内容" prop="workContent">
-            <el-input v-model="formData.workContent"></el-input>
+          <el-form-item label="讲师名称" prop="teacherName">
+            <el-input v-model="formData.teacherName"></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="入职时间" prop="inDate">
-            <el-date-picker type="date" v-model="formData.inDate" style="width: 100%;"
+          <el-form-item label="辅导员名称" prop="teacher2Name">
+            <el-input v-model="formData.teacher2Name"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="8">
+          <el-form-item label="就业指导" prop="teacher3Name">
+            <el-input v-model="formData.teacher3Name"></el-input>
+          </el-form-item>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8">
+          <el-form-item label="课程开始时间" prop="courseBegin">
+            <el-date-picker type="date" v-model="formData.courseBegin" style="width: 100%;"
                             format="yyyy-MM-dd"
                             value-format="yyyy-MM-dd"></el-date-picker>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="离职时间" prop="outDate">
-            <el-date-picker type="date" v-model="formData.outDate" style="width: 100%;"
+          <el-form-item label="课程结束时间" prop="courseEnd">
+            <el-date-picker v-model="formData.courseEnd" type="date" style="width: 100%;"
                             format="yyyy-MM-dd"
                             value-format="yyyy-MM-dd"></el-date-picker>
           </el-form-item>
@@ -47,37 +54,31 @@
       </el-row>
       <el-row>
         <el-col :span="8">
-          <el-form-item label="联系人" prop="linkMan">
-            <el-input v-model="formData.linkMan"></el-input>
+          <el-form-item label="理论成绩" prop="llCourse">
+            <el-input v-model="formData.llCourse" type="number"
+                      placeholder="输入数字"></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="公司所在城市" prop="comCity">
-            <el-input v-model="formData.comCity"></el-input>
+          <el-form-item label="技能成绩" prop="jnCourse">
+            <el-input v-model="formData.jnCourse" type="number"
+                      placeholder="输入数字"></el-input>
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="工作性质" prop="workXz">
-            <el-input v-model="formData.workXz"></el-input>
+          <el-form-item label="末班次数" prop="mbConut">
+            <el-input v-model="formData.mbConut" type="number"
+                      placeholder="输入数字"></el-input>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row>
-        <el-col :span="8">
-          <el-form-item label="所属行业" prop="workSshy">
-            <el-input v-model="formData.workSshy"></el-input>
+        <el-col :span="16">
+          <el-form-item label="备注" prop="remark">
+            <el-input v-model="formData.remark" type="textarea"
+                      :autosize="{ minRows: 2, maxRows: 4}"></el-input>
           </el-form-item>
         </el-col>
-        <el-col :span="8">
-          <el-form-item label="备注" prop="remarks">
-            <el-input v-model="formData.remarks"></el-input>
-          </el-form-item>
-        </el-col>
-        <!--<el-col :span="8">-->
-        <!--<el-form-item label="学生ID" prop="studId">-->
-          <!--<el-input v-model="formData.studId"></el-input>-->
-        <!--</el-form-item>-->
-        <!--</el-col>-->
       </el-row>
 
       <!--<el-form-item >-->
@@ -95,6 +96,7 @@
 
   import axios from 'axios'
   import selectStud from './../info/selectStud.vue'
+  import {checkNumPot2,checkInterNum} from '@/utils/rules'
   export default {
     //属性，接收父页面传值
     props: ["addDialogIsShow"],
@@ -103,39 +105,55 @@
         dialogIsShow: false,
         formData: {
           id: '',
-          comName: '',
-          comAddress: '',
-          workContent: '',
-          inDate: '',
-          outDate: '',
-          linkMan: '',
-          comCity: '',
-          workXz: '',
-          workSshy: '',
-          remarks: '',
-//          operator: '',
-//          operatedate: '',
           studId: '',
-          studName: ''
+          studCode: '',
+          studName: '',
+          courseId: '',
+          courseName: '',
+          teacherId: '',
+          teacherName: '',
+          teacher2Id: '',
+          teacher2Name: '',
+          teacher3Id: '',
+          teacher3Name: '',
+          courseBegin: '',
+          courseEnd: '',
+          llCourse: '',
+          jnCourse: '',
+          mbConut: '',
+          remark: ''
+        },
+        rules2: {
+          llCourse: [{validator: checkNumPot2, trigger: 'blur'}],
+          jnCourse: [{validator: checkNumPot2, trigger: 'blur'}],
+          mbConut: [{validator: checkInterNum, trigger: 'blur'}]
         },
 
-        addUrl: this.domain.serverpath + "/studWork/add"
+        addUrl: this.domain.serverpath + "/studLearn/add"
       }
     },
     methods: {
       submitForm() { //添加
-        //保存新增加的菜单数据
-        let form1 = this.$data.formData;
-        //获取查询参数，将参数解析成键值对
-        let qs = require("qs");
-        this.$axios.post(this.addUrl,
-          qs.stringify(form1)).then((response)=> {
-          this.dialogIsShow = false;
-          this.resetForm();
-          console.log(response.data.result);
-        }).catch((error)=> {
-          console.log(error);
-        })
+        this.$refs.formData.validate((valid) => {
+          if (!valid) {
+            this.$message.error("请重新输入");
+            return false;
+          }else{
+            //保存新增加的菜单数据
+            let form1 = this.$data.formData;
+            //获取查询参数，将参数解析成键值对
+            let qs = require("qs");
+            this.$axios.post(this.addUrl,
+              qs.stringify(form1)).then((response)=> {
+              this.dialogIsShow = false;
+              this.resetForm();
+              console.log(response.data.result);
+            }).catch((error)=> {
+              this.$message.error(""+error);
+//          console.log(error);
+            })
+          }
+        });
       },
       resetForm() { //重置
 //        let datas = this.$data.formData;
@@ -150,6 +168,7 @@
       },
       selectStudChangeHandle(option){
         this.formData.studName=option.name ;
+        this.formData.studCode=option.code ;
         this.formData.studId=option.id ;
       }
 

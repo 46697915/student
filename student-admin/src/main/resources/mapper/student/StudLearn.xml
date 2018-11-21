@@ -26,7 +26,7 @@
 
 
 
-    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+    <select id="selectBy" parameterType="StudLearnVo" resultType="StudLearn">
         select
             id, stud_id AS studId, stud_code AS studCode, stud_name AS studName, course_id AS courseId, course_name AS courseName, teacher_id AS teacherId, teacher_name AS teacherName, teacher2_id AS teacher2Id, teacher2_name AS teacher2Name, teacher3_id AS teacher3Id, teacher3_name AS teacher3Name, course_begin AS courseBegin, course_end AS courseEnd, ll_course AS llCourse, jn_course AS jnCourse, mb_conut AS mbConut, remark
         from stud_learn

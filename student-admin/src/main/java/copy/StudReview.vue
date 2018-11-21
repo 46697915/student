@@ -153,3 +153,4 @@ addUrl: this.domain.serverpath + "/studReview/add"
         <el-input v-model="formData.remark"></el-input>
         </el-form-item>
     </el-col>
+</el-row>

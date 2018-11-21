@@ -15,24 +15,27 @@
               @selection-change="handleSelectionChange">
       <el-table-column type="index" label="序号" width="50"> </el-table-column>
       <el-table-column fixed type="selection" width="55"></el-table-column>
-      <el-table-column prop="id" label="ID" width="80" v-if="false"></el-table-column>
-      <el-table-column prop="studCode" label="学生编码" width="80" ></el-table-column>
+      <el-table-column prop="id" label="ID" width="80" ></el-table-column>
       <el-table-column prop="studName" label="学生名称" width="80" ></el-table-column>
-      <el-table-column prop="courseName" label="课程名称" width="80" ></el-table-column>
-      <el-table-column prop="teacherName" label="讲师名称" width="80" ></el-table-column>
-      <el-table-column prop="teacher2Name" label="辅导员名称" width="80" ></el-table-column>
-      <el-table-column prop="teacher3Name" label="就业指导名称" width="80" ></el-table-column>
-      <el-table-column prop="courseBegin" label="课程开始时间" width="80" ></el-table-column>
-      <el-table-column prop="courseEnd" label="课程结束时间" width="80" ></el-table-column>
-      <el-table-column prop="llCourse" label="理论成绩" width="80" ></el-table-column>
-      <el-table-column prop="jnCourse" label="技能成绩" width="80" ></el-table-column>
-      <el-table-column prop="mbConut" label="末班次数" width="80" ></el-table-column>
+      <el-table-column prop="comName" label="公司名称" width="80" ></el-table-column>
+      <el-table-column prop="comXz" label="公司性质" width="80" ></el-table-column>
+      <el-table-column prop="comAdress" label="公司地址" width="80" ></el-table-column>
+      <el-table-column prop="interviewGw" label="面试岗位" width="80" ></el-table-column>
+      <el-table-column prop="comGm" label="公司规模" width="80" ></el-table-column>
+      <el-table-column prop="zpGm" label="招聘规模" width="80" ></el-table-column>
+      <el-table-column prop="interviewDate" label="面试日期" width="80" ></el-table-column>
+      <el-table-column prop="interviewLc" label="面试轮次" width="80" ></el-table-column>
+      <el-table-column prop="interviewComment" label="面试情况" width="80" ></el-table-column>
+      <el-table-column prop="linkMail" label="联系邮件" width="80" ></el-table-column>
+      <el-table-column prop="linkPhone" label="联系电话" width="80" ></el-table-column>
+      <el-table-column prop="isChannel" label="是否渠道" width="80" ></el-table-column>
+      <el-table-column prop="channelManager" label="渠道负责人" width="80" ></el-table-column>
+      <el-table-column prop="resume" label="投递简历" width="80" ></el-table-column>
+      <el-table-column prop="passingDifficulty" label="通过难度" width="80" ></el-table-column>
+      <el-table-column prop="isRecommend" label="是否推荐" width="80" ></el-table-column>
+      <el-table-column prop="isWritten" label="是否有笔试" width="80" ></el-table-column>
       <el-table-column prop="remark" label="备注" width="80" ></el-table-column>
       <el-table-column prop="studId" label="学生id" width="80" ></el-table-column>
-      <el-table-column prop="courseId" label="课程id" width="80" ></el-table-column>
-      <el-table-column prop="teacherId" label="讲师id" width="80" ></el-table-column>
-      <el-table-column prop="teacher2Id" label="辅导员id" width="80" ></el-table-column>
-      <el-table-column prop="teacher3Id" label="就业指导id" width="80" ></el-table-column>
 
       <el-table-column label="操作" width="150">
         <template slot-scope="scope">
@@ -58,8 +61,8 @@
         listData: [],
         selectRows: [],
         listDataLoading: false, //加载框
-        queryUrl: this.domain.serverpath+"/studLearn/listForPage",
-        deleteUrl: this.domain.serverpath+"/studLearn/deleteBatch",
+        queryUrl: this.domain.serverpath+"/studInterview/listForPage",
+        deleteUrl: this.domain.serverpath+"/studInterview/deleteBatch",
 
         //分页组件使用，总页数
         pageTotal: 0

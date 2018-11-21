@@ -1,7 +1,7 @@
 <template>
   <el-select v-model="selectedValue"
              filterable
-             default-first-option="true"
+             :default-first-option="true"
              @change="changeHandle"
              placeholder="请选择">
     <el-option
