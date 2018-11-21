@@ -2,11 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import MenuInfo from '@/components/menu/list'
-import StudentInfo from '@/components/student/info/list'
+import StudentInfo from '@/components/student/info/list_crud'
 import StudentWork from '@/components/student/work/list'
 import StudentLearn from '@/components/student/learn/list'
 import StudentReview from '@/components/student/review/list'
 import StudentInterview from '@/components/student/interview/list'
+import StudSummary from '@/components/statistics/student/studSummary.vue'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/studentInterview',
       name: 'StudentInterview',
       component: StudentInterview
+    },
+    {
+      path: '/statistics/studSummary',
+      name: 'StudSummary',
+      component: StudSummary
     }
   ]
 })

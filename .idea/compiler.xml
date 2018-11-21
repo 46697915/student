@@ -24,7 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="student" />
         <module name="student-admin" />
-        <module name="vue-admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

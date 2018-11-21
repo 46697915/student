@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/student.iml" filepath="$PROJECT_DIR$/student.iml" />
       <module fileurl="file://$PROJECT_DIR$/student-admin/student-admin.iml" filepath="$PROJECT_DIR$/student-admin/student-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/vue-admin/vue-admin.iml" filepath="$PROJECT_DIR$/vue-admin/vue-admin.iml" />
     </modules>
   </component>
 </project>
