@@ -16,6 +16,7 @@
       <el-table-column type="index" label="序号" width="50"> </el-table-column>
       <el-table-column fixed type="selection" width="55"></el-table-column>
       <el-table-column prop="id" label="主键" width="55" v-if="false"></el-table-column>
+      <el-table-column prop="studName" label="学生名" width="55" ></el-table-column>
       <el-table-column prop="comName" label="公司名称" width="100" ></el-table-column>
       <el-table-column prop="comAddress" label="工作地址" width="100" ></el-table-column>
       <el-table-column prop="workContent" label="工作内容" width="100" ></el-table-column>
@@ -29,7 +30,6 @@
       <el-table-column prop="operator" label="录入人" width="80"  v-if="false"></el-table-column>
       <el-table-column prop="operatedate" label="录入日期" width="140" ></el-table-column>
       <el-table-column prop="studId" label="学生ID" width="55" ></el-table-column>
-      <el-table-column prop="studName" label="学生名" width="55" ></el-table-column>
       <el-table-column label="操作" width="150">
         <template slot-scope="scope">
           <!--<el-button @click="detaildialog(scope.row)" type="text" size="small">详情</el-button>-->

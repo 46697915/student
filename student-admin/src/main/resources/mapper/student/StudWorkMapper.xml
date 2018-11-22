@@ -46,6 +46,9 @@
             <if test="studName != null and studName != ''">
                 and stud_name like concat('%',#{studName },'%')
             </if>
+            <if test="studId != null and studId != ''">
+                and stud_id = #{studId }
+            </if>
         </where>
     </select>
 
